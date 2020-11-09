@@ -43,7 +43,7 @@ void main(void)
     
     while(1)
     {
-        // turn on LED after delay
+        // toggle LED after delay
        counter=0;  
         while (counter < 100000)
         {
