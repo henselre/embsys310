@@ -11,4 +11,4 @@ The addresses of the pointers to x and y.
 
 1c  Share a screen shot of the local variables inside main() after the function swap_pointer() returns showing the values of the pointers and what they are pointing to.
 
-![image of screenshot](C:\UW_Workspace\repos\embsys310\embsys310a\assignment05\A5_Problem_1\A5 P1 screenshot.png)
+![image of screenshot](https://github.com/henselre/embsys310/blob/main/assignment05/A5_Problem_1/A5%20P1%20screenshot.png)
