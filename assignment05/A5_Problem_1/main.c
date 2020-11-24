@@ -6,7 +6,7 @@
 //
 
 void swap_value(int* x, int* y);
-//void swap_pointer(int* x, int* y);
+void swap_pointer(int** x, int** y);
 //
 void swap_value(int* a, int* b)   /* function swaps the value of two pointers*/
 {
