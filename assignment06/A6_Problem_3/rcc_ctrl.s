@@ -59,15 +59,15 @@ RCC_ALIAS_B  EQU 0x42420984
 RCC_AHB2ENR EQU 0x4002104C
 
 enable_rcc                     // R0 contains the port, 0 for enablimg GPIOA, 1 for enabling GPIOB
-     PUSH {R2, R6, R7, LR}     // Push R2, R6 and R7 to preserve in main and LR to return to main
+     PUSH {R2, R7, LR}     // Push R2 and R7 to preserve in main and LR to return to main
      MOVS R2, #1               // use R2 to hold bit to write to alias address
-     LDR R6, =RCC_ALIAS_A      // use R6 and R7 to hold alias addresses
-     LDR R7, =RCC_ALIAS_B
      CMP R0, #0                  // check port
      BNE.N L1                    // if port argument is not 0 branch to L1 to enable GPIOB
-     STR R2, [R6]                // port argumeny is 0 so enable GPIOA. Write a 1 to GPIOA alias
-     B.N L2                      // branch to return 
-L1:  STR R2, [R7]                // port argument is 1 so enable GPIOB. Write a 1 to GPIOB alias
-L2:  POP {R2, R6, R7, PC}          // restore and put PC at LR for return
+     LDR R7, =RCC_ALIAS_A      // port argumeny is 0 so store GPIOA RCC alieas in R7
+     STR R2, [R7]              //  Write a 1 to GPIOA alias
+     B.N L2                    // branch to return 
+L1:  LDR R7, =RCC_ALIAS_B      // port argument is 1 so store GPIOB RCC alias in R7
+     STR R2, [R7]              //  Write a 1 to GPIOB alias
+L2:  POP {R2, R7, PC}          // restore and put PC at LR for return
 
     END
