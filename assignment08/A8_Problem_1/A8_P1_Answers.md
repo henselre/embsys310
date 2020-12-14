@@ -9,4 +9,4 @@ The tutorial described a 108MHz clock source for the timers on that controller. 
 
 ![image of screenshot](https://github.com/henselre/embsys310/blob/main/assignment08/A8_Problem_1/Cube_Chip.png)
 
-![image of screenshot](https://github.com/henselre/embsys310/blob/main/assignment08/A8_Problem_1/Cube_Chip.png)
+![image of screenshot](https://github.com/henselre/embsys310/blob/main/assignment08/A8_Problem_1/Clock.png)
